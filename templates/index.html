@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+        body {
+          background-image: url('https://img.freepik.com/free-photo/composed-organized-workplace-realtor_23-2147764216.jpg?w=900&t=st=1671245962~exp=1671246562~hmac=199cf88e7a990bb95ec37cdc8c2376c17c43e53ec1669e464c6039ac09193a13');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Status Prediction</title>
+</head>
+
+<body>
+    <h1 style="color:rgb(2, 50, 44);"> Loan Status Prediction </h1>
+    <form method="POST" action="/status">
+
+        <label for="cars">Gender:</label>
+        <select name="Gender" id="Gender">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        </select>
+        <br>
+        <br>
+        <label for="Married">Married:</label>
+        <select name="Married" id="Married">
+        <option value="No">No</option>
+        <option value="Yes">Yes</option>
+        </select>
+        <br>
+        <br>
+        <label for="Education">Education:</label>
+        <select name="Education" id="Education">
+        <option value="Graduate">Graduate</option>
+        <option value="Not Graduate">Not Graduate</option>
+        </select>
+        <br>
+        <br>
+        <label for="Self_Employed">Self_Employed:</label>
+        <select name="Self_Employed" id="Self_Employed">
+        <option value="No">No</option>
+        <option value="Yes">Yes</option>
+        </select>
+        <br>
+        <br>
+        <label for="Property_Area">Property_Area:</label>
+        <select name="Property_Area" id="Property_Area">
+        <option value="Urban">Urban</option>
+        <option value="Semiurban">Semiurban</option>
+        <option value="Rural">Rural</option>
+        </select>
+        <br>
+        <br>
+        <label for="Dependents">Dependents:</label>
+        <select name="Dependents" id="Dependents">
+        <option value="zero">zero</option>
+        <option value="one">one</option>
+        <option value="two">two</option>
+        <option value="three_plus">three_plus</option>
+        </select>
+        <br>
+        <br>
+        <label> ApplicantIncome:</label>
+        <input type = "text" name = "ApplicantIncome">
+        </select>
+        <br>
+        <br>
+        <label>CoapplicantIncome:</label>
+        <input type = "text" name = "CoapplicantIncome">
+        </select>
+        <br>
+        <br>
+        <label>LoanAmount:</label>
+        <input type = "text" name = "LoanAmount">
+        </select>
+        <br>
+        <br>
+        <label>Loan_Amount_Term:</label>
+        <input type = "text" name = "Loan_Amount_Term">
+        </select>
+        <br>
+        <br>
+        <label>Credit_History:</label>
+        <input type = "text" name = "Credit_History">
+        </select>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <input type = "submit" value="SUBMIT">
+
+        <br>
+
+        <p>Loan is:<b> {{ prediction }}</b> </p>
+
+
+    </form>
+
+
+</body>
+</html>
